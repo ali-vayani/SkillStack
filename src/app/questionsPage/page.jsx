@@ -42,8 +42,9 @@ export default function Page() {
 
     return (
         <div className="p-4">
-        <h2 className="text-xl">{questionData.Title}</h2>
-        <QuestionComponent questionData={questionData} />
+            <h2 className="text-xl">{questionData.title}</h2>
+            <p className="w-3/4 my-10">{questionData["question"]}</p>
+            <QuestionComponent questionData={questionData} />
         </div>
     );
 }
