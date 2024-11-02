@@ -9,20 +9,11 @@ module.exports = {
   theme: {
   	extend: {
   		colors: {
-  			text: '#E8E9F3',
-  			background: 'hsl(var(--background))',
-  			primary: {
-  				DEFAULT: 'hsl(var(--primary))',
-  				foreground: 'hsl(var(--primary-foreground))'
-  			},
-  			secondary: {
-  				DEFAULT: 'hsl(var(--secondary))',
-  				foreground: 'hsl(var(--secondary-foreground))'
-  			},
-  			accent: {
-  				DEFAULT: 'hsl(var(--accent))',
-  				foreground: 'hsl(var(--accent-foreground))'
-  			},
+			'text': '#E8E9F3',
+			'background': '#040d27',
+			'primary': '#FF1F8A',
+			'secondary': '#8E44AD',
+			'accent': '#00E5FF',
   			foreground: 'hsl(var(--foreground))',
   			card: {
   				DEFAULT: 'hsl(var(--card))',

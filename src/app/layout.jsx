@@ -24,7 +24,7 @@ const pressPlay = Press_Start_2P({weight:"400", subsets: ['latin']})
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="min-h-full">
-      <body className={`${pressPlay.className} h-screen bg-background`}>
+      <body className={`${pressPlay.className} h-screen bg-background text-text`}>
 
         {children}
       </body>
