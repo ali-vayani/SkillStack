@@ -1,0 +1,613 @@
+[
+    {
+      "id": "1.1SC",
+      "type": "Multiple-Choice",
+      "title": "Self-Check 1.1: binaryNumbers",
+      "question": "Why do computers use binary numbers?",
+      "answer-choice": [
+        "At the time when computers were invented, humans only knew about the numbers 0 and 1.",
+        "It is impossible to build a computer that uses a different number base than binary.",
+        "Because there are 10 types of people: Those who understand binary, and those who don't.",
+        "It is easier to build electronic devices reliably if they only have to distinguish between two electric states.",
+        "It makes the computer faster and more efficient than other number bases."
+      ],
+      "answer": [
+        "It is easier to build electronic devices reliably if they only have to distinguish between two electric states."
+      ],
+      "note": ""
+    },
+    {
+      "id": "1.2SC",
+      "type": "Fill-In-The-Blanks",
+      "title": "Self-Check 1.2: binary1",
+      "question": "Convert each of the following decimal numbers into its equivalent binary number:",
+      "answer-choice": [
+        "6",
+        "44",
+        "72",
+        "131"
+      ],
+      "answer": [
+        "110",
+        "101100",
+        "1001000",
+        "10000011"
+      ],
+      "note": ""
+    },
+    {
+      "id": "1.3SC",
+      "type": "Fill-In-The-Blanks",
+      "title": "Self-Check 1.3: binary2",
+      "question": "What is the decimal equivalent of each of the following binary numbers?",
+      "answer-choice": [
+        "100",
+        "1011",
+        "101010",
+        "1001110"
+      ],
+      "answer": [
+        "4",
+        "11",
+        "42",
+        "78"
+      ],
+      "note": ""
+    },
+    {
+      "id": "1.4SC",
+      "type": "Free-Response",
+      "title": "Self-Check 1.4: cookieRecipe",
+      "question": "In your own words, describe an algorithm for baking cookies. Assume that you have a large number of hungry friends, so you'll want to produce several batches of cookies!\n\n(Since there are so many correct answers, Practice-It will accept any solution of sufficient length.)",
+      "answer-choice": "",
+      "answer": "",
+      "note": ""
+    },
+    {
+      "id": "1.5SC",
+      "type": "Multiple-Choice",
+      "title": "Self-Check 1.5: javaVsClass",
+      "question": "What is the difference between the file MyProgram.java and the file MyProgram.class?",
+      "answer-choice": [
+        "MyProgram.java is a source code file typed by the programmer, and MyProgram.class is a compiledExecutable class file that is run by the computer.",
+        "The .class file is for object-oriented programming and the .java file is for procedural programming.",
+        "A .java file is a much larger binary file and a .class file is a smaller compressed version.",
+        "The programmer writes the .class file first, and the .java file is generated automatically later.",
+        "A .java file contains code written in the Java language, and a .class file contains code written in the C++ language."
+      ],
+      "answer": [
+        "MyProgram.java is a source code file typed by the programmer, and MyProgram.class is a compiledExecutable class file that is run by the computer."
+      ],
+      "note": ""
+    },
+    {
+      "id": "1.6SC",
+      "type": "Multi-Select",
+      "title": "Self-Check 1.6: legalIdentifiers",
+      "question": "Which of the following can be used in a Java program as identifiers? Check all of the identifiers that are legal.",
+      "answer-choice": [
+        "_average",
+        "first-name",
+        "B4",
+        "println",
+        "sum_of_data",
+        "ABC",
+        "42isThesolution",
+        "for",
+        "AnnualSalary",
+        "\"hello\""
+      ],
+      "answer": [
+        "_average",
+        "B4",
+        "println",
+        "sum_of_data",
+        "ABC",
+        "AnnualSalary"
+      ],
+      "note": "We often receive emails from users claiming that this problem is wrong, or has a bug, or does not accept the correct solution. No; it does not. If your answer is being marked as incorrect, it is because your answer is incorrect."
+    },
+    {
+      "id": "1.7SC",
+      "type": "Multiple-Choice",
+      "title": "Self-Check 1.7: outputSyntax",
+      "question": "Which of the following is the correct syntax to output a message?",
+      "answer-choice": [
+        "System.println.out('Hello, world!');",
+        "System.println(Hello, world!);",
+        "System.out.println(\"Hello, world!\");",
+        "Out.system.println\"(Hello, world!)\";",
+        "System.println(\"Hello, world!\");"
+      ],
+      "answer": [
+        "System.out.println(\"Hello, world!\");"
+      ],
+      "note": ""
+    },
+    {
+      "id": "1.8SC",
+      "type": "Free-Response",
+      "title": "Self-Check 1.8: confounding",
+      "question": "What is the output produced from the following statements?\n\nSystem.out.println(\"\\\"Quotes\\\"\");\nSystem.out.println(\"Slashes \\//\");\nSystem.out.println(\"How '\\\"confounding' '\\\"\\\\\" it is!\");",
+      "answer-choice": "",
+      "answer": "",
+      "note": ""
+    },
+    {
+      "id": "1.9SC",
+      "type": "Free-Response",
+      "title": "Self-Check 1.9: Archie",
+      "question": "What is the output produced from the following statements? (Treat tabs as aligning to every multiple of eight spaces.)\n\nSystem.out.println(\"name\\tage\\theight\");\nSystem.out.println(\"Archie\\t17\\t5'9\\\"\");\nSystem.out.println(\"Betty\\t17\\t5'6\\\"\");\nSystem.out.println(\"Jughead\\t16\\t6'\");",
+      "answer-choice": "",
+      "answer": "",
+      "note": "Many students fail this problem by not understanding how the \\t character works, causing them to have the wrong number of spaces. A tab inserts multiple spaces until the total number of characters on the current line so far is a multiple of 8. So for Example, in the string \"hi\thello\tgoodbye\tbeautiful\thi\", the first \\t becomes 6 spaces (because \"hi\" is 2 characters, so it takes 6 more to get to 8), the second \\t is 3 spaces (because \"hello\" is 5 characters wide, so it takes 3 more characters to get to 8), the third is 1 (because \"goodbye\" is 7 characters), and the fourth \\t is 7 spaces (because \"beautiful\" is 9 characters, so it takes 7 more to get to 16)."
+    },
+    {
+      "id": "1.10SC",
+      "type": "Free-Response",
+      "title": "Self-Check 1.10: Shaq",
+      "question": "What is the output produced from the following statements?\n\nSystem.out.println(\"Shaq is 7'1\");\nSystem.out.println(\"The string \\\"\\\" is an empty message.\");\nSystem.out.println(\"\\\\'\\\"\"\");",
+      "answer-choice": "",
+      "answer": "",
+      "note": ""
+    },
+    {
+      "id": "1.11SC",
+      "type": "Free-Response",
+      "title": "Self-Check 1.11: downwardSpiral",
+      "question": "What is the output produced from the following statements? (Treat tabs as aligning to every multiple of eight spaces.)\n\nSystem.out.println(\"\\\\\\\\\");\nSystem.out.println(\"'\");\nSystem.out.println(\"\\ta\\tb\\tc\");\nSystem.out.println(\"\\\"\\\"\\\"\");\nSystem.out.println(\"C:\\nin\\the downward spiral\");",
+      "answer-choice": "",
+      "answer": "",
+      "note": "Many students fail this problem by not understanding how the \\t character works, causing them to have the wrong number of spaces. A tab inserts multiple spaces until the total number of characters on the current line so far is a multiple of 8. So for Example, in the string \"hi\thello\tgoodbye\tbeautiful\thi\", the first \\t becomes 6 spaces (because \"hi\" is 2 characters, so it takes 6 more to get to 8), the second \\t is 3 spaces (because \"hello\" is 5 characters wide, so it takes 3 more characters to get to 8), the third is 1 (because \"goodbye\" is 7 characters), and the fourth \\t is 7 spaces (because \"beautiful\" is 9 characters, so it takes 7 more to get to 16)."
+    },
+    {
+      "id": "1.12SC",
+      "type": "Free-Response",
+      "title": "Self-Check 1.12: DoubleSlash",
+      "question": "What is the output from the following Java program? (Assume that a tab is expanded into eight spaces.)\n\npublic class Letter {\n    public static void main(String[] args) {\n        System.out.println(\"Dear \\\"DoubleSlash\\\" magazine,\");\n        System.out.println();\n        System.out.println(\"\\tYour publication confuses me. Is it\");\n        System.out.println(\"a \\\\ slash or a //// slash?\");\n        System.out.println(\"\\nSincerely,\");\n        System.out.println(\"Susan \\\"Suzy\\\" Smith\");\n    }\n}",
+      "answer-choice": "",
+      "answer": "",
+      "note": ""
+    },
+    {
+      "id": "1.13SC",
+      "type": "Free-Response",
+      "title": "Self-Check 1.13: Sally",
+      "question": "What series of println statements would produce the following output?\n\n\"Several slashes are sometimes seen,\"\nsaid Sally. \"I've said so.\" See?\n\\ / \\\\ // \\\\///",
+      "answer-choice": "",
+      "answer": "",
+      "note": "Many students fail this problem by not understanding how the \\t character works, causing them to have the wrong number of spaces. A tab inserts multiple spaces until the total number of characters on the current line so far is a multiple of 8. So for Example, in the string \"hi\thello\tgoodbye\tbeautiful\thi\", the first \\t becomes 6 spaces (because \"hi\" is 2 characters, so it takes 6 more to get to 8), the second \\t is 3 spaces (because \"hello\" is 5 characters wide, so it takes 3 more characters to get to 8), the third is 1 (because \"goodbye\" is 7 characters), and the fourth \\t is 7 spaces (because \"beautiful\" is 9 characters, so it takes 7 more to get to 16)."
+    },
+    {
+      "id": "1.14SC",
+      "type": "Free-Response",
+      "title": "Self-Check 1.14: TestOfKnowledge",
+      "question": "What series of println statements would produce the following output?\n\nThis is a test of your\nknowledge of \"quotes\" used\nin 'string literals.'\n\nYou're bound to \"get it right\"\nif you read the section on\n''quotes.''",
+      "answer-choice": "",
+      "answer": "",
+      "note": ""
+    },
+    {
+      "id": "1.15SC",
+      "type": "Free-Response",
+      "title": "Self-Check 1.15: printlnSlashes",
+      "question": "Write a println statement that produces the following output:\n\n/ \\ // \\\\ /// \\\\\\",
+      "answer-choice": "",
+      "answer": "",
+      "note": ""
+    },
+    {
+      "id": "1.16SC",
+      "type": "Free-Response",
+      "title": "Self-Check 1.16: withoutPrintStatements",
+      "question": "Rewrite the following code as a series of equivalent System.out.println statements (i.e., without any System.out.print statements):\n\nSystem.out.print(\"Twas \");\nSystem.out.print(\"brillig and the \");\nSystem.out.println(\" \");\nSystem.out.print(\"  slithy toves did\");\nSystem.out.print(\" \");\nSystem.out.println(\"gyre and\");\nSystem.out.println(  \"gimble\");\nSystem.out.println();\nSystem.out.println(  \"in the wabe.\" );",
+      "answer-choice": "",
+      "answer": "",
+      "note": ""
+    },
+    {
+      "id": "1.17SC",
+      "type": "Free-Response",
+      "title": "Self-Check 1.17: Commentary",
+      "question": "What is the output of the following program? Note that the program contains several comments.\n\npublic class Commentary {\n    public static void main(String[] args) {\n        System.out.println(\"some lines of code\");\n        System.out.println(\"have // characters on them\");\n        System.out.println(\"which means \");  // that they are comments\n        // System.out.println(\"written by the programmer.\");\n\n        System.out.println(\"lines can also\");\n        System.out.println(\"have /* and */ characters\");\n        /* System.out.println(\"which represents\");\n        System.out.println(\"a multi-line style\");\n        */ System.out.println(\"of comment.\");\n    }\n}",
+      "answer-choice": "",
+      "answer": "",
+      "note": ""
+    },
+    {
+      "id": "1.18SC",
+      "type": "Free-Response",
+      "title": "Self-Check 1.18: MyProgram-errors",
+      "question": "",
+      "answer-choice": "",
+      "answer": "",
+      "note": ""
+    },
+    {
+      "id": "1.19SC",
+      "type": "Free-Response",
+      "title": "Self-Check 1.19: SecretMessage-errors",
+      "question": "",
+      "answer-choice": "",
+      "answer": "",
+      "note": ""
+    },
+    {
+      "id": "1.20SC",
+      "type": "Free-Response",
+      "title": "Self-Check 1.20: FamousSpeech-errors",
+      "question": "",
+      "answer-choice": "",
+      "answer": "",
+      "note": ""
+    },
+    {
+      "id": "1.21SC",
+      "type": "Multiple-Choice",
+      "title": "Self-Check 1.21: methodHeaderSyntax",
+      "question": "Which of the following method headers uses the correct syntax?",
+      "answer-choice": [
+        "public void staticExample{} (",
+        "public staticExample() {",
+        "public static voidExample() {",
+        "public void staticExample() {",
+        "public staticExample void[] {"
+      ],
+      "answer": [
+        "public static voidExample() {"
+      ],
+      "note": ""
+    },
+    {
+      "id": "1.22SC",
+      "type": "Free-Response",
+      "title": "Self-Check 1.22: Tricky",
+      "question": "What is the output produced from the following program? You may wish to draw a structure diagram first.\n\npublic class Tricky {\n    public static void main(String[] args) {\n        message1();\n        message2();\n        System.out.println(\"Done with main.\");\n    }\n\n    public static void message1() {\n        System.out.println(\"This is message1.\");\n    }\n\n    public static void message2() {\n        System.out.println(\"This is message2.\");\n        message1();\n        System.out.println(\"Done with message2.\");\n    }\n}",
+      "answer-choice": "",
+      "answer": "",
+      "note": ""
+    },
+    {
+      "id": "1.23SC",
+      "type": "Free-Response",
+      "title": "Self-Check 1.23: Strange",
+      "question": "What is the output produced from the following program? You may wish to draw a structure diagram first.\n\npublic class Strange {\n    public static void main(String[] args) {\n        first();\n        third();\n        second();\n        third();\n    }\n    \n    public static void first() {\n        System.out.println(\"Inside first method.\");\n    }\n    \n    public static void second() {\n        System.out.println(\"Inside second method.\");\n        first();\n    }\n    \n    public static void third() {\n        System.out.println(\"Inside third method.\");\n        first();\n        second();\n    }\n}",
+      "answer-choice": "",
+      "answer": "",
+      "note": ""
+    },
+    {
+      "id": "1.24SC",
+      "type": "Free-Response",
+      "title": "Self-Check 1.24: Strange2",
+      "question": "public class Strange {\n    public static void main(String[] args) {\n        first();\n        third();\n        second();\n        third();\n    }\n    \n    public static void first() {\n        System.out.println(\"Inside first method.\");\n    }\n    \n    public static void second() {\n        System.out.println(\"Inside second method.\");\n        first();\n    }\n    \n    public static void third() {\n        first();\n        second();\n        System.out.println(\"Inside third method.\");\n    }\n}",
+      "answer-choice": "",
+      "answer": "",
+      "note": ""
+    },
+    {
+      "id": "1.25SC",
+      "type": "Free-Response",
+      "title": "Self-Check 1.25: Strange3",
+      "question": "What is the output produced from the following program? You may wish to draw a structure diagram first. This is a slightly modified version of the previous problem, Strange.\n\npublic class Strange {\n    public static void main(String[] args) {\n        second();\n        first();\n        second();\n        third();\n    }\n    \n    public static void first() {\n        System.out.println(\"Inside first method.\");\n    }\n    \n    public static void second() {\n        System.out.println(\"Inside second method.\");\n        first();\n    }\n    \n    public static void third() {\n        System.out.println(\"Inside third method.\");\n        first();\n        second();\n    }\n}\n",
+      "answer-choice": "",
+      "answer": "",
+      "note": ""
+    },
+    {
+      "id": "1.26SC",
+      "type": "Free-Response",
+      "title": "Self-Check 1.26: Confusing",
+      "question": "What is the output from the following Java program?\n\npublic class Confusing {\n    public static void method1() {\n        System.out.println(\"I am method 1.\");\n    }\n\n    public static void method2() {\n        method1();\n        System.out.println(\"I am method 2.\");\n    }\n\n    public static void method3() {\n        method2();\n        System.out.println(\"I am method 3.\");\n        method1();\n    }\n\n    public static void main(String[] args) {\n        method1();\n        method3();\n        method2();\n        method3();\n    }\n}",
+      "answer-choice": "",
+      "answer": "",
+      "note": ""
+    },
+    {
+      "id": "1.27SC",
+      "type": "Free-Response",
+      "title": "Self-Check 1.27: Confusing2",
+      "question": "What is the output produced from the following program? You may wish to draw a structure diagram first. This is a slightly modified version of the previous problem, Confusing.\n\npublic class Confusing {\n    public static void main(String[] args) {\n        method1();\n        method3();\n        method2();\n        method3();\n    }\n\n    public static void method2() {\n        method1();\n        System.out.println(\"I am method 2.\");\n    }\n\n    public static void method3() {\n        method1();\n        method2();\n        System.out.println(\"I am method 3.\");\n    }\n\n    public static void method1() {\n        System.out.println(\"I am method 1.\");\n    }\n}",
+      "answer-choice": "",
+      "answer": "",
+      "note": ""
+    },
+    {
+      "id": "1.28SC",
+      "type": "Free-Response",
+      "title": "Self-Check 1.28: Confusing3",
+      "question": "What is the output produced from the following program? You may wish to draw a structure diagram first. This is a slightly modified version of the previous problem, Confusing2.\n\npublic class Confusing {\n    public static void main(String[] args) {\n        method2();\n        method1();\n        method3();\n        method2();\n    }\n    \n    public static void method2() {\n        method1();\n        System.out.println(\"I am method 2.\");\n    }\n    \n    public static void method3() {\n        method2();\n        System.out.println(\"I am method 3.\");\n        method1();\n    }\n    \n    public static void method1() {\n        System.out.println(\"I am method 1.\");\n    }\n}",
+      "answer-choice": "",
+      "answer": "",
+      "note": ""
+    },
+    {
+      "id": "1.29SC",
+      "type": "Free-Response",
+      "title": "Self-Check 1.29: LotsOfErrors-errors",
+      "question": "",
+      "answer-choice": "",
+      "answer": "",
+      "note": ""
+    },
+    {
+      "id": "1.30SC",
+      "type": "Multiple-Dropdown",
+      "title": "Self-Check 1.30: javaClub",
+      "question": "Consider the following program, saved into a file named Example.java:\n\n1  public class Example {\n2      public static void displayRule() {\n3          System.out.println(\"The first rule \");\n4          System.out.println(\"of Java Club is,\");\n5          System.out.println();\n6          System.out.println(\"you do not talk about Java Club.\");\n7      }\n8\n9      public static void main(String[] args) {\n10          System.out.println(\"The rules of Java Club.\");\n11          displayRule();\n12          displayRule();\n13      }\n14  }\nWhat would happen if each of the following changes were made to the Example program? Treat each change independently of the others.\n\nIf there would be no change to the program, choose \"nothing\".\nIf it would cause the program not to compile, or an error when attempting to run it, choose \"error\".\nIf it would change the program's output, choose \"output\".",
+      "answer-choice": "",
+      "answer": "",
+      "note": ""
+    },
+    {
+      "id": "1.30aSC",
+      "type": "Dropdown",
+      "title": "Self-Check 1.30: javaClub",
+      "question": "a) Change line 1 to:\npublic class Demonstration",
+      "answer-choice": [
+        "nothing",
+        "error",
+        "output"
+      ],
+      "answer": [
+        "error"
+      ],
+      "note": ""
+    },
+    {
+      "id": "1.30bSC",
+      "type": "Dropdown",
+      "title": "Self-Check 1.30: javaClub",
+      "question": "b) Change line 9 to:\npublic static void MAIN(String[] args) {",
+      "answer-choice": [
+        "nothing",
+        "error",
+        "output"
+      ],
+      "answer": [
+        "error"
+      ],
+      "note": ""
+    },
+    {
+      "id": "1.30cSC",
+      "type": "Dropdown",
+      "title": "Self-Check 1.30: javaClub",
+      "question": "c) Insert a new line after line 11 that reads:\nSystem.out.println();",
+      "answer-choice": [
+        "nothing",
+        "error",
+        "output"
+      ],
+      "answer": [
+        "output"
+      ],
+      "note": ""
+    },
+    {
+      "id": "1.30dSC",
+      "type": "Dropdown",
+      "title": "Self-Check 1.30: javaClub",
+      "question": "d) Change line 2 to:\npublic static void printMessage() {",
+      "answer-choice": [
+        "nothing",
+        "error",
+        "output"
+      ],
+      "answer": [
+        "error"
+      ],
+      "note": ""
+    },
+    {
+      "id": "1.30eSC",
+      "type": "Dropdown",
+      "title": "Self-Check 1.30: javaClub",
+      "question": "e) Change line 2 to:\npublic static void showMessage() {\nand change lines 11 and 12 to:\nshowMessage();",
+      "answer-choice": [
+        "nothing",
+        "error",
+        "output"
+      ],
+      "answer": [
+        "nothing"
+      ],
+      "note": ""
+    },
+    {
+      "id": "1.30fSC",
+      "type": "Dropdown",
+      "title": "Self-Check 1.30: javaClub",
+      "question": "f) Replace lines 3-4 with:\nSystem.out.println(\"The first rule of Java Club is,\");",
+      "answer-choice": [
+        "nothing",
+        "error",
+        "output"
+      ],
+      "answer": [
+        "output"
+      ],
+      "note": ""
+    },
+    {
+      "id": "1.31SC",
+      "type": "Free-Response",
+      "title": "Self-Check 1.31: GiveAdvice",
+      "question": "",
+      "answer-choice": "",
+      "answer": "",
+      "note": ""
+    },
+    {
+      "id": "1.32SC",
+      "type": "Free-Response",
+      "title": "Self-Check 1.32: Messy",
+      "question": "",
+      "answer-choice": "",
+      "answer": "",
+      "note": ""
+    },
+    {
+      "id": "1.1E",
+      "type": "Free-Response",
+      "title": "Exercise 1.1: Stewie",
+      "question": "Write a complete Java program in a class named Stewie that prints the following output:\n\n//////////////////////\n|| Victory is mine! ||\n\\\\\\\\\\\\\\\\\\\\\\\\\\",
+      "answer-choice": "",
+      "answer": "",
+      "note": ""
+    },
+    {
+      "id": "1.2E",
+      "type": "Free-Response",
+      "title": "Exercise 1.2: Spikey",
+      "question": "Write a complete Java program in a class named Spikey that prints the following output:\n\n  \\/\n \\\\//\n\\\\\\///\n///\\\\\\\n //\\\\\n  /\\",
+      "answer-choice": "",
+      "answer": "",
+      "note": ""
+    },
+    {
+      "id": "1.3E",
+      "type": "Free-Response",
+      "title": "Exercise 1.3: WellFormed",
+      "question": "Write a complete Java program in a class named WellFormed that prints the following output:\n\nA well-formed Java program has\na main method with { and }\nbraces.\n\nA System.out.println statement\nhas ( and ) and usually a\nString that starts and ends\nwith a \"\" character.\n(But we type \\\" instead!)",
+      "answer-choice": "",
+      "answer": "",
+      "note": ""
+    },
+    {
+      "id": "1.4E",
+      "type": "Free-Response",
+      "title": "Exercise 1.4: Difference",
+      "question": "Write a complete Java program in a class named Difference that prints the following output:\n\nWhat is the difference between\na ' and a \"\"?  Or between a \"\" and a \\\"\"?\n\nOne is what we see when we're typing our program.\nThe other is what appears on the \"console.\"",
+      "answer-choice": "",
+      "answer": "",
+      "note": ""
+    },
+    {
+      "id": "1.5E",
+      "type": "Free-Response",
+      "title": "Exercise 1.5: MuchBetter",
+      "question": "Write a complete Java program in a class named MuchBetter that prints the following output:\n\nA \"\"quoted\"\" String is\n'much' better if you learn\nthe rules of \"\"escape sequences.\"\"\nAlso, \"\"\"\" represents an empty String.\nDon't forget: use \\\" instead of \"\" !\n'' is not the same as \"\"",
+      "answer-choice": "",
+      "answer": "",
+      "note": ""
+    },
+    {
+      "id": "1.6E",
+      "type": "Free-Response",
+      "title": "Exercise 1.6: Meta",
+      "question": "Write a complete Java program called Meta whose output is the text that would be the source code of a Java program named Hello that prints \"Hello, world!\" as its output:\n\npublic class Hello {\n    public static void main(String[] args) {\n        System.out.println(\"Hello, world!\");\n    }\n}\nYour program must produceExactly the output shown in order to pass (usingExactly four spaces for each increment of indentation in the output).",
+      "answer-choice": "",
+      "answer": "",
+      "note": ""
+    },
+    {
+      "id": "1.7E",
+      "type": "Free-Response",
+      "title": "Exercise 1.7: Mantra",
+      "question": "Write a complete Java program in a class named Mantra that produces the following output. Remove its redundancy by adding a method.\n\nThere's one thing every coder must understand:\nThe System.out.println command.\n\nThere's one thing every coder must understand:\nThe System.out.println command.",
+      "answer-choice": "",
+      "answer": "",
+      "note": ""
+    },
+    {
+      "id": "1.8E",
+      "type": "Free-Response",
+      "title": "Exercise 1.8: Stewie2",
+      "question": "Write a complete Java program in a class named Stewie2 that prints the following output. Use at least one static method besides main to remove redundancy.\n\n//////////////////////\n|| Victory is mine! ||\n\\\\\\\\\\\\\\\\\\\\\\\\\\\n|| Victory is mine! ||\n\\\\\\\\\\\\\\\\\\\\\\\\\\\n|| Victory is mine! ||\n\\\\\\\\\\\\\\\\\\\\\\\\\\\n|| Victory is mine! ||\n\\\\\\\\\\\\\\\\\\\\\\\\\\\n|| Victory is mine! ||\n\\\\\\\\\\\\\\\\\\\\\\\\\\",
+      "answer-choice": "",
+      "answer": "",
+      "note": ""
+    },
+    {
+      "id": "1.9E",
+      "type": "Free-Response",
+      "title": "Exercise 1.9: Egg",
+      "question": "Write a complete Java program in a class named Egg that displays the following output:\n\n  _______\n /              \\\n/                \\\n-\"\"-'-\"\"-'-\"\"-\n\\                /\n \\_______/",
+      "answer-choice": "",
+      "answer": "",
+      "note": ""
+    },
+    {
+      "id": "1.10E",
+      "type": "Free-Response",
+      "title": "Exercise 1.10: Egg2",
+      "question": "Write a complete Java program in a class named Egg2 that generates the following output. Use static methods to show structure and eliminate redundancy in your solution.\n\n  _______\n /       \\\n/         \\\n\\         /\n \\_______/\n-\"\"-'-\"\"-'-\"\"-\n  _______\n /       \\\n/         \\\n\\         /\n \\_______/\n-\"\"-'-\"\"-'-\"\"-\n\\         /\n \\_______/\n  _______\n /       \\\n/         \n-\"\"-'-\"\"-'-\"\"-\n\\         /\n \\_______/",
+      "answer-choice": "",
+      "answer": "",
+      "note": ""
+    },
+    {
+      "id": "1.11E",
+      "type": "Free-Response",
+      "title": "Exercise 1.11: TwoRockets",
+      "question": "Write a complete Java program in a class named TwoRockets that generates the following output. Use static methods to show structure and eliminate redundancy in your solution.\n\nNote that there are two rocket ships next to each other. What redundancy can you eliminate using static methods? What redundancy cannot be eliminated?\n\n   /\\       /\\\n  /  \\     /  \\\n /    \\   /    \\\n+------+ +------+\n|      | |      |\n|      | |      |\n+------+ +------+\n|United| |United|\n|States| |States|\n+------+ +------+\n|      | |      |\n|      | |      |\n+------+ +------+\n   /\\       /\\\n  /  \\     /  \\\n /    \\   /    \\",
+      "answer-choice": "",
+      "answer": "",
+      "note": ""
+    },
+    {
+      "id": "1.12E",
+      "type": "Free-Response",
+      "title": "Exercise 1.12: FightSong",
+      "question": "Write a complete Java program in a class named FightSong that generates the following three figures of output. Use static methods to show structure and eliminate redundancy in your solution.\n\nIn particular, make sure that main contains no System.out.println statements, that any System.out.println statement(s) repeated are captured in a method that is called just once, and that the same System.out.println statement never appears in two places in the code.\n\nGo, team, go!\nYou can do it.\n\nGo, team, go!\nYou can do it.\nYou're the best,\nIn the West.\nGo, team, go!\nYou can do it.\n\nGo, team, go!\nYou can do it.\nYou're the best,\nIn the West.\nGo, team, go!\nYou can do it.\n\nGo, team, go!\nYou can do it.",
+      "answer-choice": "",
+      "answer": "",
+      "note": ""
+    },
+    {
+      "id": "1.13E",
+      "type": "Free-Response",
+      "title": "Exercise 1.13: StarFigures",
+      "question": "Write a complete Java program in a class named StarFigures that generates the following output. Use static methods to show structure and eliminate redundancy in your solution.\n\n*****\n*****\n * *\n  *\n * *\n\n*****\n*****\n * *\n  *\n * *\n*****\n*****\n\n  *\n  *\n  *\n*****\n*****\n * *\n  *\n * *",
+      "answer-choice": "",
+      "answer": "",
+      "note": ""
+    },
+    {
+      "id": "1.14E",
+      "type": "Free-Response",
+      "title": "Exercise 1.14: Lanterns",
+      "question": "Write a complete Java program in a class named Lanterns that generates the following three figures of output. Use static methods to show structure and eliminate redundancy in your solution.\n\nIn particular, make sure that main contains no System.out.println statements except for blank lines, that any System.out.println statement(s) repeated are captured in a method that is called just once, and that the same System.out.println statement never appears in two places in the code.\n\n    *****\n  *********\n*************\n\n    *****\n  *********\n*************\n* | | | | | *\n*************\n    *****\n  *********\n*************\n\n    *****\n  *********\n*************\n    *****\n* | | | | | *\n* | | | | | *\n    *****\n    *****",
+      "answer-choice": "",
+      "answer": "",
+      "note": ""
+    },
+    {
+      "id": "1.15E",
+      "type": "Free-Response",
+      "title": "Exercise 1.15: EggStop",
+      "question": "Write a complete Java program in a class named EggStop that generates the following output. Use static methods to show structure and eliminate redundancy in your solution.\n\n  ______\n /      \\\n/        \\\n\\        /\n \\______/\n\n  ______\n /      \\\n/        \\\n\\        /\n \\______/\n+--------+\n\n  ______\n /      \\\n/        \\\n|  STOP  |\n\\        /\n \\______/\n+--------+",
+      "answer-choice": "",
+      "answer": "",
+      "note": ""
+    },
+    {
+      "id": "1.16E",
+      "type": "Free-Response",
+      "title": "Exercise 1.16: Shining",
+      "question": "Write a program in a class named Shining that prints the following line of output 1000 times:\n\nAll work and no play makes Jack a dull boy.\nYou should not write a program whose source code is 1000 lines long; use methods to shorten the program. What is the shortest program you can write that will produce the 1000 lines of output, using only the material from Chapter 1 (println, methods, etc.)?",
+      "answer-choice": "",
+      "answer": "",
+      "note": ""
+    },
+    {
+      "id": "1.17E",
+      "type": "Free-Response",
+      "title": "Exercise 1.17: FarewellGoodBye",
+      "question": "Write a program called FarewellGoodBye that prints the following lyrics. Use static methods to show structure and eliminate redundancy in your solution.\n\nFarewell,\ngoodbye,\nau revoir,\ngood night!\nIt's time, to go,\nand I'll be out of sight!\n\nFarewell,\ngoodbye,\nau revoir,\ntake care!\nI'll say, goodbye,\nthat's neither here nor there!\n\nFarewell,\ngoodbye,\nau revoir,\nsee you later!\nI hope, you think,\nI'm a lover, not a hater!",
+      "answer-choice": "",
+      "answer": "",
+      "note": ""
+    },
+    {
+      "id": "1.18E",
+      "type": "Free-Response",
+      "title": "",
+      "question": "",
+      "answer-choice": "",
+      "answer": "",
+      "note": ""
+    }
+  ]
+  
