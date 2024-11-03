@@ -13,7 +13,7 @@ export default function ChapterDropDown({chapterName, chapterId}) {
             },
         };
         
-        fetch(`http://localhost:3001/questions`, options)
+        fetch(`https://skillstack-production.up.railway.app/questions`, options)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok ' + response.statusText);

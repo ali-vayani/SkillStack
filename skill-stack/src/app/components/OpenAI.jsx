@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 
 export default function OpenAIComponent({ prompt }) {
     const apiKey = process.env.NEXT_PUBLIC_OPENAI_API_KEY;
-
     const openai = new OpenAI({
         apiKey: apiKey,
         dangerouslyAllowBrowser: true,
