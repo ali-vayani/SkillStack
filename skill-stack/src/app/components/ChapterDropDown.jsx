@@ -7,18 +7,6 @@ export default function ChapterDropDown({chapterName, chapterId}) {
     const [questions, setQuestions] = useState([]);
     const [isExpanded, setIsExpanded] = useState(false);
     useEffect(() => {
-        // fetch('/SkillStack.csv')
-        //     .then(response => response.text())
-        //     .then(data => {
-        //         Papa.parse(data, {
-        //             header: true, 
-        //             skipEmptyLines: true,
-        //             complete: (results) => {
-        //                 setQuestions(results.data);
-        //             },
-        //         });
-        //     })
-        //     .catch(error => console.error('Error fetching CSV:', error));
         const options = {
             method: 'GET', // Specify the HTTP method
             headers: {
@@ -53,14 +41,19 @@ export default function ChapterDropDown({chapterName, chapterId}) {
         ));
     }
 
+    function getChatperNum(str) {
+        const match = str.match(/\d+/); 
+        return match ? parseInt(match[0], 10) : null; 
+    }
+
     return (
-        <div className="h-auto w-4/5 ">
-            <div className="w-full text-2xl text-center bg-secondary/20 p-3 rounded-lg border-2 border-secondary my-3">
-                <button onClick={() => setIsExpanded(!isExpanded)}>{chapterName}</button>
+        <div className="h-auto">
+            <div className="w-full text-2xl text-centerp-3 my-3 font-medium">
+                <button onClick={() => setIsExpanded(!isExpanded)} className="underline decoration-2">{chapterName}</button>
             </div>
             {isExpanded && (
-                <div className="flex flex-col items-center">
-                    {displayTokens('1')}
+                <div className="flex flex-col items-start">
+                    {displayTokens(getChatperNum(chapterName) +'')}
                 </div>
             )}
         </div>

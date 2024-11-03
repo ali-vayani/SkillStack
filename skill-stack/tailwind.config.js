@@ -9,11 +9,11 @@ module.exports = {
   theme: {
   	extend: {
   		colors: {
-			'text': '#E8E9F3',
-			'background': '#040d27',
-			'primary': '#FF1F8A',
-			'secondary': '#8E44AD',
-			'accent': '#00E5FF',
+			'text': '#1C1C1C',
+			'background': '#F2F2F2',
+			'primary': '#BF5700',
+			'secondary': '#333333',
+			'accent': '#D3D3D3',
   			foreground: 'hsl(var(--foreground))',
   			card: {
   				DEFAULT: 'hsl(var(--card))',

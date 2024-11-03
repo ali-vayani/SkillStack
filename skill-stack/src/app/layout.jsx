@@ -1,6 +1,6 @@
 import localFont from "next/font/local";
 import "./globals.css";
-import { Press_Start_2P } from 'next/font/google'
+import { Press_Start_2P, Fira_Code, Fira_Mono} from 'next/font/google'
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -19,12 +19,14 @@ export const metadata = {
 };
 
 const pressPlay = Press_Start_2P({weight:"400", subsets: ['latin']})
+const firaCode = Fira_Code({weight: ["300", "400", "500", "700"], subsets: ['latin']});
+const firaMono = Fira_Mono({ weight: ["400", "500", "700"], subsets: ["latin"] });
 
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="min-h-full">
-      <body className={`${pressPlay.className} h-screen bg-background text-text`}>
+      <body className={`${firaCode.className} h-screen bg-background text-text`}>
         {children}
       </body>
     </html>
