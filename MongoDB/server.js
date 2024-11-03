@@ -17,16 +17,15 @@ mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
     .catch((error) => console.error('Error connecting to MongoDB:', error));
 
 
+// Remove mongoose.disconnect() from the /data endpoint
 app.get('/data', async (req, res) => {
     console.log(req.query.id);
     try {
-        const question = await Question.findOne({id: req.query.id});
-        res.json(question)
+        const question = await Question.findOne({ id: req.query.id });
+        res.json(question);
     } catch (error) {
         console.error('Error fetching data:', error);
         res.status(500).json({ message: error.message });
-    } finally {
-        mongoose.disconnect();
     }
 });
 
