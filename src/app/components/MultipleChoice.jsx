@@ -24,8 +24,15 @@ export default function MultipleChoice({ questionData }) {
     };
 
     const handleSubmit = () => {
-        setIsSubmitted(true);
-        setIsCorrect(selectedAnswer === questionData.answer.substring(2,questionData.answer.length-2));
+        const correctAnswer = questionData.answer.substring(2,questionData.answer.length-2)
+        if (selectedAnswer === correctAnswer){
+            setIsSubmitted(true);
+            setIsCorrect(true);
+        } else {
+            setIsSubmitted(true);
+            setIsCorrect(false);
+        }
+        
     };
 
     return (
@@ -53,7 +60,7 @@ export default function MultipleChoice({ questionData }) {
             <button
                 onClick={handleSubmit}
                 className="mt-4 px-4 py-2 bg-primary text-white rounded-lg"
-                disabled={!selectedAnswer || isSubmitted}
+                disabled={!selectedAnswer}
             >
                 Submit
             </button>
@@ -62,7 +69,7 @@ export default function MultipleChoice({ questionData }) {
                     {isCorrect ? (
                         <p className="text-green-500">Correct!</p>
                     ) : (
-                        <p className="text-red-500">Incorrect. The correct answer is: {questionData.answer.substring(2,questionData.answer.length-2)}</p>
+                        <p className="text-red-500">Incorrect. Try again!</p>
                     )}
                 </div>
             )}

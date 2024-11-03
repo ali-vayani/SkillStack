@@ -8,8 +8,7 @@ id,type,title,question,answer-choice,answer,note
 (Since there are so many correct answers, Practice-It will accept any solution of sufficient length.)",,,
 1.5SC,Multiple-Choice,Self-Check 1.5: javaVsClass,What is the difference between the file MyProgram.java and the file MyProgram.class?,"[""MyProgram.java is a source code file typed by the programmer, and MyProgram.class is a compiledExecutable class file that is run by the computer."", ""The .class file is for object-oriented programming and the .java file is for procedural programming."", ""A .java file is a much larger binary file and a .class file is a smaller compressed version."", ""The programmer writes the .class file first, and the .java file is generated automatically later."", ""A .java file contains code written in the Java language, and a .class file contains code written in the C++ language.""]","[""MyProgram.java is a source code file typed by the programmer, and MyProgram.class is a compiledExecutable class file that is run by the computer.""]",
 1.6SC,Multi-Select,Self-Check 1.6: legalIdentifiers,Which of the following can be used in a Java program as identifiers? Check all of the identifiers that are legal.,"[""_average"", ""first-name"", ""B4"", ""println"", ""sum_of_data"", ""ABC"", ""42isThesolution"", ""for"", ""AnnualSalary"", ""\""hello\""""]","[""_average"", ""B4"", ""println"", ""sum_of_data"", ""ABC"", ""AnnualSalary""]","We often receive emails from users claiming that this problem is wrong, or has a bug, or does not accept the correct solution. No; it does not. If your answer is being marked as incorrect, it is because your answer is incorrect."
-1.7SC,Multiple-Choice,Self-Check 1.7: outputSyntax,"Which of the following is the correct syntax to output a message?
-","[""System.println.out(\'Hello, world!\');"", ""System.println(Hello, world!);"", ""System.out.println(\""Hello, world!\"");"", ""Out.system.println\""(Hello, world!)\"";"", ""System.println(\""Hello, world!\"");""]","[""System.out.println(\""Hello, world!\"");""]",
+1.7SC,Multiple-Choice,Self-Check 1.7: outputSyntax,"Which of the following is the correct syntax to output a message?","[""System.println.out(\'Hello, world!\');"", ""System.println(Hello, world!);"", ""System.out.println(\""Hello, world!\"");"", ""Out.system.println\""(Hello, world!)\"";"", ""System.println(\""Hello, world!\"");""]","[""System.out.println(\""Hello, world!\"");""]",
 1.8SC,Free-Response,Self-Check 1.8: confounding,"What is the output produced from the following statements?
 
 System.out.println(""\""Quotes\"""");
@@ -185,8 +184,7 @@ public class Strange {
         first();
         second();
     }
-}
-",,,
+}",,,
 1.26SC,Free-Response,Self-Check 1.26: Confusing,"What is the output from the following Java program?
 
 public class Confusing {

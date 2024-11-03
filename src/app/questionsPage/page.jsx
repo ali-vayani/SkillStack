@@ -3,6 +3,8 @@ import { useSearchParams } from "next/navigation";
 import FRQuestion from "../components/FRQuestion";
 import MultipleChoice from "../components/MultipleChoice";
 import { useState, useEffect } from "react";
+import MultiSelect from "../components/MultiSelect";
+import FillInTheBlanks from "../components/FillInTheBlanks";
 
 export default function Page() {
     const searchParams = useSearchParams();
@@ -11,6 +13,8 @@ export default function Page() {
     const QUESTION_COMPONENTS = {
         "free-response": FRQuestion,
         "multiple-choice": MultipleChoice,
+        "multi-select": MultiSelect,
+        "fill-in-the-blanks": FillInTheBlanks,
     };
 
     const [questionData, setQuestionData] = useState(null);
