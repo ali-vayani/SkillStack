@@ -3,14 +3,15 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 
-const CodeEditor = () => {
+const CodeEditor = ({ code, setCode }) => {
   const editorRef = useRef(null);
   const monacoRef = useRef(null);
   const [language, setLanguage] = useState('javascript');
-  const [code, setCode] = useState('// Start coding here\n');
+  const [editorInstance, setEditorInstance] = useState(null);
+  const [output, setOutput] = useState(null);
+  const [currentCode, setCurrentCode] = useState(code);
 
   useEffect(() => {
-    // Load Monaco Editor from CDN
     const script = document.createElement('script');
     script.src = "https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.44.0/min/vs/loader.min.js";
     script.async = true;
@@ -18,17 +19,18 @@ const CodeEditor = () => {
     document.body.appendChild(script);
 
     return () => {
+      if (editorInstance) {
+        editorInstance.dispose();
+      }
       document.body.removeChild(script);
     };
   }, []);
 
   const initMonaco = () => {
-    // @ts-ignore
     window.require.config({
       paths: { vs: 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.44.0/min/vs' }
     });
 
-    // @ts-ignore
     window.require(['vs/editor/editor.main'], function (monaco) {
       monacoRef.current = monaco;
       
@@ -51,39 +53,62 @@ const CodeEditor = () => {
           cursorStyle: 'line',
         });
 
-        // Update code state when content changes
+        setEditorInstance(editor);
+
         editor.onDidChangeModelContent(() => {
-          setCode(editor.getValue());
+          const newValue = editor.getValue();
+          setEditorInstance(editor);
+          console.log("new val", newValue)
+          setCurrentCode(newValue);
+          setCode(newValue);
         });
       }
     });
   };
 
+  useEffect(() => {
+    if (editorInstance && code !== editorInstance.getValue()) {
+      //editorInstance.setValue(code);
+      setCurrentCode(code);
+    }
+  }, [code, editorInstance]);
+
   const handleLanguageChange = (newLanguage) => {
     setLanguage(newLanguage);
-    if (monacoRef.current && editorRef.current) {
+    if (monacoRef.current && editorInstance) {
       monacoRef.current.editor.setModelLanguage(
-        monacoRef.current.editor.getModels()[0],
+        editorInstance.getModel(),
         newLanguage
       );
     }
   };
 
   const handleRunCode = () => {
-    // Basic code execution - you might want to implement this differently
-    // This is just a simple example using eval for JavaScript
-    try {
-      if (language === 'javascript') {
-        // eslint-disable-next-line no-eval
-        const result = eval(code);
-        console.log('Output:', result);
-        alert('Check console for output');
-      } else {
-        alert('Code execution is only implemented for JavaScript in this demo');
+    if (!editorInstance) return;
+    
+    console.log("editor instance: ", editorInstance.getValue());
+    const codeToExecute = editorInstance.getValue();
+    console.log("codeToExecute", codeToExecute);
+
+    
+    if (language === 'javascript') {
+      try {
+        setOutput([]);
+          console.log('idfk', eval(codeToExecute))
+          eval(codeToExecute)
+        let logs = eval(codeToExecute);
+        console.log('LOGS',logs);
+
+        if (logs) {
+          setOutput(logs);
+        } else {
+          setOutput(['Code executed successfully (no output)']);
+        }
+      } catch (error) {
+        setOutput([`Error: ${error.message}`]);
       }
-    } catch (error) {
-      console.error('Error executing code:', error);
-      alert('Error executing code: ' + error.message);
+    } else {
+      setOutput([`Language '${language}' execution is not supported in this demo`]);
     }
   };
 
@@ -108,6 +133,14 @@ const CodeEditor = () => {
         ref={editorRef} 
         className="h-96 w-full border rounded-md overflow-hidden"
       />
+      {output && output.length > 0 && (
+        <div className="mt-4 p-4 bg-gray-900 text-white rounded-md">
+          <h3 className="text-sm font-medium mb-2">Output:</h3>
+          <pre className="whitespace-pre-wrap">
+            {output.join('\n')}
+          </pre>
+        </div>
+      )}
     </Card>
   );
 };

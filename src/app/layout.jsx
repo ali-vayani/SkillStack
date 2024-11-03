@@ -25,7 +25,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="min-h-full">
       <body className={`${pressPlay.className} h-screen bg-background text-text`}>
-
         {children}
       </body>
     </html>
