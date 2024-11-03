@@ -16,6 +16,7 @@
     "@tinymce/tinymce-react": "^5.1.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "firebase": "^11.0.1",
     "lucide-react": "^0.454.0",
     "next": "15.0.2",
     "papaparse": "^5.4.1",
