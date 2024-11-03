@@ -1,15 +1,16 @@
-'use client'
+'use client';
+
 import { useSearchParams } from "next/navigation";
 import FRQuestion from "../components/FRQuestion";
 import MultipleChoice from "../components/MultipleChoice";
-import { useState, useEffect } from "react";
 import MultiSelect from "../components/MultiSelect";
 import FillInTheBlanks from "../components/FillInTheBlanks";
+import { useState, useEffect } from "react";
 
 export default function Page() {
     const searchParams = useSearchParams();
-    const encodedData = searchParams.get('data');
-    
+    const questionId = searchParams.get('id'); // Assuming you pass the question ID as a query parameter
+
     const QUESTION_COMPONENTS = {
         "free-response": FRQuestion,
         "multiple-choice": MultipleChoice,
@@ -17,40 +18,75 @@ export default function Page() {
         "fill-in-the-blanks": FillInTheBlanks,
     };
 
-    const [questionData, setQuestionData] = useState(null);
+    const [questions, setQuestions] = useState([]);
+    const [currentQuestion, setCurrentQuestion] = useState(null);
     const [QuestionComponent, setQuestionComponent] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
-    // Parse the data in useEffect
+    // Fetch the JSON data in useEffect
     useEffect(() => {
-        if (encodedData) {
-        try {
-            const parsedData = JSON.parse(decodeURIComponent(encodedData));
-            setQuestionData(parsedData);
-            // Set component right after parsing data
-            if (parsedData?.type) {
-            setQuestionComponent(() => QUESTION_COMPONENTS[parsedData.type.toLowerCase()]);
+        const fetchQuestions = async () => {
+            try {
+                console.log('Fetching questions.json from /data/questions.json');
+                const response = await fetch('/public/questions.json');
+                console.log('Fetch response status:', response.status);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const data = await response.json();
+                console.log('Fetched data:', data);
+                setQuestions(data);
+
+                if (questionId) {
+                    const selectedQuestion = data.find(q => q.id === questionId);
+                    if (selectedQuestion) {
+                        setCurrentQuestion(selectedQuestion);
+                        if (selectedQuestion.type) {
+                            const component = QUESTION_COMPONENTS[selectedQuestion.type.toLowerCase()];
+                            if (component) {
+                                setQuestionComponent(() => component);
+                            } else {
+                                setError(`Unknown question type: ${selectedQuestion.type}`);
+                            }
+                        }
+                    } else {
+                        setError(`Question with id "${questionId}" not found.`);
+                    }
+                } else {
+                    setError('No question ID provided in the URL.');
+                }
+            } catch (err) {
+                console.error('Error fetching questions:', err);
+                setError('Failed to load questions data.');
+            } finally {
+                setLoading(false);
             }
-        } catch (error) {
-            console.error('Error parsing question data:', error);
-        }
-        }
-    }, [encodedData]);
+        };
+
+        fetchQuestions();
+    }, [questionId]);
 
     // Loading state
-    if (!questionData || !QuestionComponent) {
+    if (loading) {
         return <div className="p-4">Loading...</div>;
     }
 
-    // Error state for unknown question type
-    if (!QUESTION_COMPONENTS[questionData.type?.toLowerCase()]) {
-        return <div className="p-4">Unknown question type: {questionData.type}</div>;
+    // Error state
+    if (error) {
+        return <div className="p-4 text-red-500">{error}</div>;
     }
 
+    // Render the question
     return (
         <div className="p-4">
-            <h2 className="text-xl">{questionData.title}</h2>
-            <p className="w-3/4 my-10">{questionData["question"]}</p>
-            <QuestionComponent questionData={questionData} />
+            <h2 className="text-xl">{currentQuestion.title}</h2>
+            <p className="w-3/4 my-10">{currentQuestion.question}</p>
+            {QuestionComponent ? (
+                <QuestionComponent questionData={currentQuestion} />
+            ) : (
+                <div className="text-red-500">No component found for this question type.</div>
+            )}
         </div>
     );
 }
