@@ -1,6 +1,7 @@
 'use client'
 import { useSearchParams } from "next/navigation";
 import FRQuestion from "../components/FRQuestion";
+import MultipleChoice from "../components/MultipleChoice";
 import { useState, useEffect } from "react";
 
 export default function Page() {
@@ -9,6 +10,7 @@ export default function Page() {
     
     const QUESTION_COMPONENTS = {
         "free-response": FRQuestion,
+        "multiple-choice": MultipleChoice,
     };
 
     const [questionData, setQuestionData] = useState(null);
