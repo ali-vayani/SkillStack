@@ -40,7 +40,7 @@ export default function Home() {
       
       <section className="h-screen flex justify-center items-center flex-col">
         <h1 className="text-7xl text-primary font-bold mb-2">Skill Stack</h1>
-        <h4 className="text-3xl text-secondary font-light">Build Your Skills, One Line at a Time!</h4>
+        <h4 className="text-3xl text-secondary font-light">Build Your Skills, One Stack at a Time!</h4>
       </section>
       
       <section className="min-h-screen">

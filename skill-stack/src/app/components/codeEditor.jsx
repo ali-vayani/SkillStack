@@ -8,7 +8,7 @@ const CodeEditor = ({ code, setCode }) => {
   const monacoRef = useRef(null);
   const [language, setLanguage] = useState('javascript');
   const [editorInstance, setEditorInstance] = useState(null);
-  const [output, setOutput] = useState(null);
+  const [output, setOutput] = useState([]);
   const [currentCode, setCurrentCode] = useState(code);
 
   useEffect(() => {
@@ -33,7 +33,7 @@ const CodeEditor = ({ code, setCode }) => {
 
     window.require(['vs/editor/editor.main'], function (monaco) {
       monacoRef.current = monaco;
-      
+
       if (editorRef.current) {
         const editor = monaco.editor.create(editorRef.current, {
           value: code,
@@ -49,16 +49,12 @@ const CodeEditor = ({ code, setCode }) => {
             vertical: 'visible',
             horizontal: 'visible',
           },
-          readOnly: false,
-          cursorStyle: 'line',
         });
 
         setEditorInstance(editor);
 
         editor.onDidChangeModelContent(() => {
           const newValue = editor.getValue();
-          setEditorInstance(editor);
-          console.log("new val", newValue)
           setCurrentCode(newValue);
           setCode(newValue);
         });
@@ -68,7 +64,6 @@ const CodeEditor = ({ code, setCode }) => {
 
   useEffect(() => {
     if (editorInstance && code !== editorInstance.getValue()) {
-      //editorInstance.setValue(code);
       setCurrentCode(code);
     }
   }, [code, editorInstance]);
@@ -76,36 +71,21 @@ const CodeEditor = ({ code, setCode }) => {
   const handleLanguageChange = (newLanguage) => {
     setLanguage(newLanguage);
     if (monacoRef.current && editorInstance) {
-      monacoRef.current.editor.setModelLanguage(
-        editorInstance.getModel(),
-        newLanguage
-      );
+      monacoRef.current.editor.setModelLanguage(editorInstance.getModel(), newLanguage);
     }
   };
 
   const handleRunCode = () => {
     if (!editorInstance) return;
-    
-    console.log("editor instance: ", editorInstance.getValue());
-    const codeToExecute = editorInstance.getValue();
-    console.log("codeToExecute", codeToExecute);
 
-    
+    const codeToExecute = editorInstance.getValue();
+    setOutput([]);
+
     if (language === 'javascript') {
       try {
-        setOutput([]);
-          console.log('idfk', eval(codeToExecute))
-          eval(codeToExecute)
-        let logs = eval(codeToExecute);
-        console.log('LOGS',logs);
-        //eval(adada)
-        setOutput(logs);
-
-        if (logs) {
-          setOutput(logs);
-        } else {
-          setOutput(['Code executed successfully (no output)']);
-        }
+        // Using Function constructor instead of eval
+        const result = new Function(`return ${codeToExecute}`)();
+        setOutput([`Output: ${result}`]);
       } catch (error) {
         setOutput([`Error: ${error.message}`]);
       }
@@ -113,8 +93,6 @@ const CodeEditor = ({ code, setCode }) => {
       setOutput([`Language '${language}' execution is not supported in this demo`]);
     }
   };
-
-  useEffect(() => { console.log(` this is ryan's test: ${output}`) }, [output])
 
   return (
     <Card className="w-full max-w-4xl p-4">
@@ -133,16 +111,11 @@ const CodeEditor = ({ code, setCode }) => {
         </Select>
         <Button onClick={handleRunCode}>Run Code</Button>
       </div>
-      <div 
-        ref={editorRef} 
-        className="h-96 w-full border rounded-md overflow-hidden"
-      />
-      {output && output.length > 0 && (
+      <div ref={editorRef} className="h-96 w-full border rounded-md overflow-hidden" />
+      {output.length > 0 && (
         <div className="mt-4 p-4 bg-gray-900 text-white rounded-md">
           <h3 className="text-sm font-medium mb-2">Output:</h3>
-          <pre className="whitespace-pre-wrap">
-            {output.join('\n')}
-          </pre>
+          <pre className="whitespace-pre-wrap">{output.join('\n')}</pre>
         </div>
       )}
     </Card>
