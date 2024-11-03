@@ -4,8 +4,8 @@ const cors = require('cors');
 const Question = require('./question.js');
 
 const app = express();
-const PORT = 3001;
-const MONGO_URI = 'mongodb+srv://SkillStack:SkillStack@cluster0.eewtw.mongodb.net/skillstack';
+const PORT = process.env.PORT;
+const MONGO_URI = process.env.MONGO_URI;
 
 // Middleware
 app.use(cors());
