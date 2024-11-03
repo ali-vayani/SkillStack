@@ -1,5 +1,4 @@
 'use client'
-import Papa from 'papaparse';
 import { useState, useEffect } from 'react';
 import QuestionToken from './QuestionToken';
 
