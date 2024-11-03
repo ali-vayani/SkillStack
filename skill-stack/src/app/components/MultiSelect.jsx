@@ -53,8 +53,8 @@ export default function MultiSelect({ questionData }) {
 
     const handleSubmit = () => {
         console.log("Submitting answers:", selectedAnswers);
+        setCorrectAnswers(questionData.answer)
         console.log("Correct answers:", correctAnswers);
-
         // Check if selected answers match the correct answers
         const isAnswerCorrect = correctAnswers.length === selectedAnswers.length &&
             correctAnswers.every(answer => selectedAnswers.includes(answer));
