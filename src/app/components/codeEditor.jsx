@@ -98,6 +98,8 @@ const CodeEditor = ({ code, setCode }) => {
           eval(codeToExecute)
         let logs = eval(codeToExecute);
         console.log('LOGS',logs);
+        //eval(adada)
+        setOutput(logs);
 
         if (logs) {
           setOutput(logs);
@@ -111,6 +113,8 @@ const CodeEditor = ({ code, setCode }) => {
       setOutput([`Language '${language}' execution is not supported in this demo`]);
     }
   };
+
+  useEffect(() => { console.log(` this is ryan's test: ${output}`) }, [output])
 
   return (
     <Card className="w-full max-w-4xl p-4">
