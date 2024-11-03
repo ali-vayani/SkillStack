@@ -47,10 +47,13 @@ export default function Page() {
     }
 
     return (
-        <div className="p-4">
-            <h2 className="text-xl">{questionData.title}</h2>
-            <p className="w-3/4 my-10">{questionData["question"]}</p>
-            <QuestionComponent questionData={questionData} />
+        <div className="p-4 w-full flex justify-center items-center">
+            <div className="flex flex-col items-center max-w-[70%]">
+                <h2 className="text-3xl align-center w-full font-bold">{questionData.title}</h2>
+                <p className="w-full my-10 font-medium text-lg">{questionData["question"]}</p>
+                <QuestionComponent questionData={questionData} /> 
+            </div>
+           
         </div>
     );
 }

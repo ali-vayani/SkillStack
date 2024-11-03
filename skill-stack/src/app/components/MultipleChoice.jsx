@@ -46,7 +46,7 @@ export default function MultipleChoice({ questionData }) {
                     key={index}
                     className={`flex items-center p-2 rounded-lg border cursor-pointer ${
                         selectedAnswer === choice ? 'bg-primary/20' : 'bg-primary-100'
-                    } hover:bg-secondary`}
+                    } hover:bg-accent/50`}
                 >
                     <input
                         type="radio"
@@ -55,6 +55,7 @@ export default function MultipleChoice({ questionData }) {
                         onChange={() => handleSelect(choice)}
                         checked={selectedAnswer === choice}
                         className="mr-2"
+                        style={{ margin: '0 50px' }}
                     />
                     <span>{choice}</span>
                 </label>
