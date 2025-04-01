@@ -4,7 +4,7 @@ const cors = require('cors');
 const Question = require('./question.js');
 
 const app = express();
-const PORT = process.env.PORT;
+const PORT = 3001;
 const MONGO_URI = process.env.MONGO_URI;
 
 // Middleware
@@ -12,8 +12,8 @@ app.use(cors());
 app.use(express.json());
 
 // Connect to MongoDB
-mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => console.log('Connectedquestions to MongoDB'))
+mongoose.connect('mongodb+srv://test1:anNgo@cluster0.eewtw.mongodb.net/skillstack', { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => console.log('Connected questions to MongoDB'))
     .catch((error) => console.error('Error connecting to MongoDB:', error));
 
 
@@ -34,7 +34,7 @@ app.get('/questions', async (req, res) => {
         const questions = await Question.find({});
         
 
-        console.log("All questions in the database:", questions);
+        // console.log("All questions in the database:", questions);
 
         // Send the questions back in the response
         res.json(questions);

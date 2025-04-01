@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const fs = require('fs');
 
 async function insertData() {
-    const MONGO_URI = 'mongodb+srv://SkillStack:SkillStack@cluster0.eewtw.mongodb.net/skillstack?tlsInsecure=true';
+    const MONGO_URI = 'mongodb+srv://test1:anNgo@cluster0.eewtw.mongodb.net/'
     
     // Create a new MongoClient instance and connect
     const client = new MongoClient(MONGO_URI); // Initialize client here
